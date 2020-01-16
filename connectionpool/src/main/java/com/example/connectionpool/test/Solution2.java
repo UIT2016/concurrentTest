@@ -10,22 +10,25 @@ package com.example.connectionpool.test;
  */
 public class Solution2 {
     public int findMaxLength(int[] nums) {
-
-        /**
-         * countOne 1的数量
-         * countZero 0的数量
-         */
         int countOne=0;
         int countZero=0;
-        //计算
+        int length=0;
+        int sum=0;
         for (int i = 0; i <nums.length ; i++) {
-            if(1==nums[i]){
-                countOne++;
-            }
-            else{
-                countZero++;
-            }
+         countOne++;
+         countZero++;
+
         }
+      while(countOne!=countZero){
+          int temp=countOne>countZero?1:0;
+          for (int i = 0; i <nums.length ; i++) {
+              if(countOne==countZero)break;
+              if(nums[i]==temp)
+          }
+      }
+        System.out.println(countOne+countZero);
+
+
 
 
         return 0;
