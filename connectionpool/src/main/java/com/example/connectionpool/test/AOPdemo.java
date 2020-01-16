@@ -29,6 +29,7 @@ public class AOPdemo implements InvocationHandler {
     public static void main(String[] args) {
         in1 obj=new AOPdemo(new inimp1()).getInstance();
         obj.sayHello();
+
     }
 }
 interface in1{
@@ -39,5 +40,6 @@ class inimp1 implements in1{
     @Override
     public void sayHello() {
         System.out.println("hello");
+
     }
 }

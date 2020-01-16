@@ -1,5 +1,11 @@
 package com.example.connectionpool.test;
 
+import java.util.Calendar;
+
+
+import org.thymeleaf.util.DateUtils;
+
+
 /**
  * @author m
  * @date 2020/1/9 10:11
@@ -22,19 +28,29 @@ public class Solution2 {
       while(countOne!=countZero){
           int temp=countOne>countZero?1:0;
           for (int i = 0; i <nums.length ; i++) {
-              if(countOne==countZero)break;
-              if(nums[i]==temp)
+
           }
       }
         System.out.println(countOne+countZero);
 
-
-
-
         return 0;
     }
+//弱智倒计时
+    public static void main(String[] args) throws InterruptedException {
 
-    public static void main(String[] args) {
+        Calendar ca=Calendar.getInstance();
+        long s=0;
+
+        ca.set(2020,0,16,18,00,00);
+        do{   Calendar sa = DateUtils.createNow();
+
+            s=(ca.getTime().getTime() - sa.getTime().getTime()) / 1000;
+
+            System.out.println(s);
+            Thread.sleep(1000);
+        }
+        while(s!=0);
+
 
     }
 }
